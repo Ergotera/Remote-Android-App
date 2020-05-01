@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!--Classic Medical Theme Colors-->
+        <color name="colorDark">#383734</color>
+        <color name="colorLight">#E6F2F0</color>
+        <color name="colorPrimary">#2F6381</color>
+        <color name="colorPrimaryDark">#2B3547</color>
+        <color name="colorSecondary">#76BBB0</color>
+        <color name="colorSecondaryDark">#35909A</color>
+        <color name="colorAccent">#E35D65</color>
+
+        <color name="white">#FFFFFF</color>
+
+</resources>

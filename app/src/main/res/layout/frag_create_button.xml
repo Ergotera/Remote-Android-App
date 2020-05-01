@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_create_button_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CreateButtonFragment">
+
+    <ScrollView
+        android:id="@+id/frag_create_button_container_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/frag_create_button_scrollable_linlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/frag_create_button_preview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preview"
+                android:textColor="@color/colorDark"
+                android:textSize="18sp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/frag_create_button_preview_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="0dp">
+
+                <FrameLayout
+                    android:id="@+id/frag_create_button_preview_frame"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/frag_create_button_preview_img_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible"
+                        android:backgroundTint="@color/white"
+                        app:srcCompat="@drawable/ic_menu_button"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <Button
+                        android:id="@+id/frag_create_button_preview_txt_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/placeholder_button_name"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/white"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </FrameLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/frag_create_button_btn_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/placeholder_button_name"
+                android:textColor="@color/colorDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_create_button_title" />
+
+            <EditText
+                android:id="@+id/frag_create_button_btn_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_create_button_btn_name_title" />
+
+            <TextView
+                android:id="@+id/frag_create_button_btn_style_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/button_style"
+                android:textColor="@color/colorDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_create_button_btn_name_input" />
+
+            <Button
+                android:id="@+id/frag_create_button_select_img_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_menu_gallery"
+                android:backgroundTint="@color/white"
+                android:padding="15dp"
+                android:text="@string/select_image"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_create_button_btn_style_title" />
+
+            <TextView
+                android:id="@+id/frag_create_button_btn_command_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/button_command"
+                android:textColor="@color/colorDark"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/frag_create_button_select_audio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_menu_sound"
+                    android:padding="15dp"
+                    android:text="@string/select_sound"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frag_create_button_select_img_btn" />
+
+                <Button
+                    android:id="@+id/frag_create_button_record_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_menu_circle"
+                    android:padding="15dp"
+                    android:text="@string/record_command"
+                    android:backgroundTint="@color/white"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/frag_create_button_save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/create_button"
+                android:drawableLeft="@drawable/ic_menu_plus"
+                android:textColor="@color/colorLight"
+                android:backgroundTint="@color/colorSecondary"
+                android:textAllCaps="false"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
